@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-export default function Hero() {
+export default function Hero({ onOpenContact }) {
   return (
     <section className="relative bg-[#0F1E29] pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#00CED1] opacity-5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
@@ -19,7 +19,7 @@ export default function Hero() {
             Soy Gestor de Productividad con IA. Optimizo y Automatizo los procesos de tu negocio para que recuperes horas, elimines el caos y te enfoques en lo que realmente genera dinero.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] w-full sm:w-auto text-lg gap-2">
+            <button onClick={onOpenContact} className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] w-full sm:w-auto text-lg gap-2">
               Quiero una Auditoría Gratuita <ArrowRight size={20} />
             </button>
             <button className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-transparent border-2 border-[#00CED1] text-[#00CED1] hover:bg-[#00CED1] hover:text-[#0F1E29] w-full sm:w-auto text-lg">

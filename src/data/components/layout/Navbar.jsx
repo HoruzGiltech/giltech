@@ -1,7 +1,7 @@
 import { Cpu, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ onOpenContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,7 +25,7 @@ export default function Navbar() {
           <a href="#servicios" className="text-white hover:text-[#00CED1] transition-colors font-medium">Servicios</a>
           <a href="#proceso" className="text-white hover:text-[#00CED1] transition-colors font-medium">Proceso</a>
           <a href="#sobre-mi" className="text-white hover:text-[#00CED1] transition-colors font-medium">Sobre Mí</a>
-          <button className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] px-4 py-2 text-sm">Auditoría Gratis</button>
+          <button onClick={onOpenContact} className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] px-4 py-2 text-sm">Auditoría Gratis</button>
         </div>
 
         <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -38,7 +38,7 @@ export default function Navbar() {
           <a href="#servicios" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[#00CED1]">Servicios</a>
           <a href="#proceso" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[#00CED1]">Proceso</a>
           <a href="#sobre-mi" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[#00CED1]">Sobre Mí</a>
-          <button className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] w-full">Auditoría Gratis</button>
+          <button onClick={() => { setIsMobileMenuOpen(false); onOpenContact(); }} className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] w-full">Auditoría Gratis</button>
         </div>
       )}
     </nav>
