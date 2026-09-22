@@ -1,8 +1,9 @@
 import { Mail, Target } from "lucide-react";
 
 const BRAND = {
-  whatsapp: "https://wa.me/584126776419?text=Hola%20quiero%20agendar%20mi%20auditoria",
-  email: "contacto@giltech.com",
+  whatsapp:
+    "https://wa.me/584126776419?text=Hola%20quiero%20agendar%20mi%20auditoria",
+  email: "giltechnology.2025@gmail.com",
   linkedin: "http://linkedin.com/in/gilbert-mendoza-rodriguez-35ba32173",
 };
 
@@ -14,14 +15,13 @@ export const About = () => (
           <div className="aspect-4/5 bg-linear-to-br from-[#1a2e3d] to-[#0a141b] rounded-2xl overflow-hidden border border-[#1a2e3d] shadow-2xl flex items-center justify-center relative z-10">
             <Target size={80} className="text-[#00CED1] opacity-20" />
 
-          {/* aqui va la imagen de la foto cuando se tenga y comentar el target de la linea de arriba
+            {/* aqui va la imagen de la foto cuando se tenga y comentar el target de la linea de arriba
             <img
               src="/ruta-de-tu-foto.jpg"
               alt="Gilbert Mendoza - CEO de Giltech"
               className="w-full h-full object-cover"
             />
             */}
-            
 
             <div className="absolute bottom-4 left-4 right-4 bg-[#0F1E29]/80 backdrop-blur p-4 rounded-xl border border-white/10">
               <p className="font-bold text-[#00CED1]">Gilbert Mendoza</p>
