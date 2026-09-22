@@ -1,4 +1,5 @@
-import { Cpu, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
+import logoGiltech from "../../../assets/logo-giltech.jpg";
 
 const BRAND = {
   whatsapp:
@@ -13,9 +14,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-6 h-6 rounded bg-[#00CED1] flex items-center justify-center">
-              <Cpu size={14} className="text-[#0F1E29]" />
-            </div>
+            <img src={logoGiltech} alt="Giltech" className="w-8 h-8 rounded-full object-cover object-[center_25%]" />
             <span className="text-xl font-bold text-white">
               Gil<span className="text-[#00CED1]">tech</span>
             </span>

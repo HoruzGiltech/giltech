@@ -1,5 +1,6 @@
-import { Cpu, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import logoGiltech from '../../../assets/logo-giltech.jpg';
 
 export default function Navbar({ onOpenContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,9 +16,7 @@ export default function Navbar({ onOpenContact }) {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0F1E29] py-4 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-[#00CED1] flex items-center justify-center">
-            <Cpu size={20} className="text-[#0F1E29]" />
-          </div>
+          <img src={logoGiltech} alt="Giltech" className="w-10 h-10 rounded-full object-cover object-[center_25%]" />
           <span className="text-2xl font-bold text-white tracking-tight">Gil<span className="text-[#00CED1]">tech</span></span>
         </div>
 
