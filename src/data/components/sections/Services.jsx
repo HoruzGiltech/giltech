@@ -1,4 +1,4 @@
-import { CheckCircle2, Cpu, Search, Users } from 'lucide-react';
+import { CheckCircle2, Cpu, Globe, Search, Users } from 'lucide-react';
 
 const WHATSAPP_NUMBER = "584126776419";
 
@@ -8,22 +8,29 @@ export default function Services() {
       icon: <Search size={28} />,
       title: "Auditoría de Productividad",
       desc: "Análisis profundo de tus procesos actuales para detectar cuellos de botella y fugas de tiempo.",
-      price: "Desde $150 USD",
+      price: "Desde $149.99 USD",
       features: ["Mapeo de procesos", "Diagnóstico de herramientas", "Plan de acción de 30 días"]
     },
     {
       icon: <Cpu size={28} />,
       title: "Sistema de Productividad con IA",
       desc: "Diseño e implementación de un ecosistema automatizado y optimizado con Inteligencia Artificial.",
-      price: "Desde $500 USD",
+      price: "Desde $499.99 USD",
       features: ["Setup de herramientas", "Automatizaciones clave", "Capacitación al equipo"]
     },
     {
       icon: <Users size={28} />,
       title: "Acompañamiento Mensual",
       desc: "Gestión continua, optimización constante y soporte para asegurar que el sistema se mantenga escalable.",
-      price: "Desde$250 USD / mes",
+      price: "Desde $249.99 USD / mes",
       features: ["Revisión semanal", "Ajuste de procesos", "Soporte prioritario"]
+    },
+    {
+      icon: <Globe size={28} />,
+      title: "Creación de Páginas Web",
+      desc: "Diseño y desarrollo de sitios web profesionales, rápidos y adaptados a móviles para potenciar tu presencia digital.",
+      price: "Desde $99 USD",
+      features: ["Diseño responsivo", "Optimización SEO básica", "Integración con WhatsApp"]
     }
   ];
 
@@ -39,7 +46,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((srv, idx) => {
             const message = encodeURIComponent(`Hola, quiero solicitar mi servicio de - ${srv.title}`);
             const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
@@ -67,7 +74,7 @@ export default function Services() {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-slate-200">
-                  <div className="text-3xl font-bold text-[#0F1E29] mb-4">{srv.price}</div>
+                  <div className="text-2xl font-bold text-[#0F1E29] mb-4">{srv.price}</div>
                   <a 
                     href={whatsappLink}
                     target="_blank"
