@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
+import CompassShowcase, { COMPASS_URL } from './CompassShowcase';
 
 export default function Hero({ onOpenContact }) {
   return (
@@ -22,10 +23,32 @@ export default function Hero({ onOpenContact }) {
             <button onClick={onOpenContact} className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-[#00CED1] text-[#0F1E29] hover:bg-opacity-90 shadow-[0_4px_14px_0_rgba(0,206,209,0.39)] w-full sm:w-auto text-lg gap-2">
               Quiero una Auditoría Gratuita <ArrowRight size={20} />
             </button>
-            <button className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-transparent border-2 border-[#00CED1] text-[#00CED1] hover:bg-[#00CED1] hover:text-[#0F1E29] w-full sm:w-auto text-lg">
+            <a href="#servicios" className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-transparent border-2 border-[#00CED1] text-[#00CED1] hover:bg-[#00CED1] hover:text-[#0F1E29] w-full sm:w-auto text-lg">
               Ver mis servicios
-            </button>
+            </a>
           </div>
+        </div>
+
+        <div id="compass" className="mt-20 md:mt-28 text-center scroll-mt-24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a2e3d] border border-[#00CED1]/30 rounded-full text-[#00CED1] text-sm font-semibold mb-4">
+            <span className="h-2 w-2 rounded-full bg-[#00CED1] animate-pulse"></span>
+            Nuevo · Compass
+          </div>
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
+            Conoce <span className="text-[#00CED1]">Compass</span>, nuestro sistema de seguimiento de actividades
+          </h2>
+          <p className="text-base md:text-lg text-[#D1D8E0] max-w-2xl mx-auto mb-10">
+            Asigna tareas, controla los tiempos de respuesta y mide el rendimiento de tu equipo de oficina y de campo desde un solo lugar.
+          </p>
+          <CompassShowcase />
+          <a
+            href={COMPASS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-8 text-[#00CED1] font-semibold hover:underline"
+          >
+            Ir a Compass <ExternalLink size={16} />
+          </a>
         </div>
       </div>
     </section>
